@@ -86,7 +86,7 @@ public class Snap extends CardGame{
         if (Objects.equals(cardOne.getSuit(), cardTwo.getSuit())) {
             printMessage("MATCH!");
             printMessage(currentPlayer.getName() + " Wins!");
-            setHasMatch(hasMatch);
+            setHasMatch(true);
         } else {
             printMessage("NO MATCH \n");
         }
