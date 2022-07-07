@@ -54,24 +54,68 @@ public class Snap extends CardGame{
         printMessage("\n");
     }
 
+    Player playerOne = new Player("Player One", 1);
+    Player playerTwo = new Player("Player Two", 2);
+    Player currentPlayer = playerOne;
+
+    public void playerOneTurnStart() {
+        printMessage("Player 1's Turn:");
+        currentPlayer = playerOne;
+        setCardOne(dealTurn());
+        playerOne.setCard(cardOne);
+        printStatus(cardOne);
+    }
+
+    public void playerOneTurn() {
+        printMessage("Player 1's Turn:");
+        currentPlayer = playerOne;
+        setCardTwo(dealTurn());
+        playerOne.setCard(cardTwo);
+        printStatus();
+    }
+
+    public void playerTwoTurn() {
+        printMessage("Player 2's Turn:");
+        currentPlayer = playerTwo;
+        setCardTwo(dealTurn());
+        playerTwo.setCard(cardTwo);
+        printStatus();
+    }
+
+    public void checkWin() {
+        if (Objects.equals(cardOne.getSuit(), cardTwo.getSuit())) {
+            printMessage("MATCH!");
+            printMessage(currentPlayer.getName() + " Wins!");
+            setHasMatch(hasMatch);
+        } else {
+            printMessage("NO MATCH \n");
+        }
+    }
+
     @Override
     public void run() {
         printGreeting();
         DeckOfCards.setDeckOfCards(DeckOfCards.shuffleDeck());
-        setCardOne(dealTurn());
-        printStatus(cardOne);
+        playerOneTurnStart();
+        playerTwoTurn();
+        checkWin();
+        currentPlayer = playerOne;
         while (!hasMatch) {
-            setCardTwo(dealTurn());
-            printStatus();
-            if (Objects.equals(cardOne.getSuit(), cardTwo.getSuit())) {
-                printMessage("MATCH!");
-                printMessage("You Win!");
-                break;
+            if (Objects.equals(currentPlayer.getName(), playerOne.getName())) {
+                playerOneTurn();
             } else {
-                printMessage("NO MATCH");
+                playerTwoTurn();
             }
+            checkWin();
+
             discardPile.add(cardOne);
             setCardOne(cardTwo);
+
+            if (currentPlayer == playerOne) {
+                currentPlayer = playerTwo;
+            } else {
+                currentPlayer = playerOne;
+            }
         }
     }
 }

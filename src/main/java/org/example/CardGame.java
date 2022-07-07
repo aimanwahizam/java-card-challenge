@@ -1,21 +1,4 @@
 package org.example;//package org.example;
-//
-//public class CardGame {
-//
-//}
-//        DeckOfCards.sortDeckInNumberOrder();
-//        DeckOfCards.getDeck();
-//        DeckOfCards.sortDeckIntoSuits();
-//        DeckOfCards.getDeck();
-//        DeckOfCards.shuffleDeck();
-//                DeckOfCards.getDeck();
-
-//public static void run() {
-//        DeckOfCards.setDeckOfCards(DeckOfCards.shuffleDeck());
-//        DeckOfCards
-//        }
-
-
 import java.util.Scanner;
 
 public abstract class CardGame {
