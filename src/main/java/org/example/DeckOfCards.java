@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public class DeckOfCards {
     private static ArrayList<Card> deckOfCards = new ArrayList<>(52);
 
+    // Static Constructor
     static {
         for (int i = 0; i < Card.getSuitArray().length; i++) {
             for (int j = 0; j < Card.getValueArray().length; j++) {
@@ -50,6 +51,4 @@ public class DeckOfCards {
         Collections.shuffle(shuffledDeck);
         return shuffledDeck;
     }
-
-    // RESET DECK
 }

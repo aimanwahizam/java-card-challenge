@@ -10,10 +10,14 @@ public abstract class CardGame {
         this.scanner = new Scanner(System.in);
     }
 
+    public Scanner getScanner() {
+        return scanner;
+    }
+
     abstract public void run();
 
     public void printGreeting() {
-        System.out.println("Let's play " + name + "!");
+        System.out.println("Let's play " + name + "!\n");
     }
 
     public void printMessage(String message) {
@@ -23,10 +27,10 @@ public abstract class CardGame {
     public void getEnterInput() {
         boolean isActive = true;
         while (isActive) {
-            System.out.println("Press Enter");
+            printMessage("Press Enter");
             String userInput = scanner.nextLine();
             if (userInput.isEmpty()) {
-                isActive = !isActive;
+                isActive = false;
             }
         }
     }

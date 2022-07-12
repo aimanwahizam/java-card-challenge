@@ -4,10 +4,12 @@ public class Player {
     private String name;
     private int order;
     private Card card;
+    private int score;
 
     public Player(String name, int order) {
         this.name = name;
         this.order = order;
+        this.score = 0;
     }
 
     public String getName() {
@@ -28,5 +30,13 @@ public class Player {
 
     public void setCard(Card card) {
         this.card = card;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 }

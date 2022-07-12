@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7243146-1073-4bc2-8f8a-ee942c9ea645" name="Changes" comment="fixed alternating players. next fix break while loop">
+    <list default="true" id="f7243146-1073-4bc2-8f8a-ee942c9ea645" name="Changes" comment="snap game finished for 2 players. make interface to ask for num of players">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HomeCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DeckOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DeckOfCards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Snap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Snap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +44,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aiman/nology/Development/java-card-project&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aiman/nology/Development/nology-music-player&quot;
   }
 }</component>
   <component name="RunManager">
@@ -91,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657200041034</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="snap game finished for 2 players. make interface to ask for num of players">
+      <created>1657200498939</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657200498939</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,6 +122,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="game finished now to make players" />
     <MESSAGE value="fixed alternating players. next fix break while loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed alternating players. next fix break while loop" />
+    <MESSAGE value="snap game finished for 2 players. make interface to ask for num of players" />
+    <option name="LAST_COMMIT_MESSAGE" value="snap game finished for 2 players. make interface to ask for num of players" />
   </component>
 </project>
