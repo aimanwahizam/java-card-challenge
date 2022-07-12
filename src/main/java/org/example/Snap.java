@@ -1,9 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class Snap extends CardGame{
 
@@ -88,7 +85,7 @@ public class Snap extends CardGame{
 
     // Methods only for Snap game
     public void checkWin() {
-        if (Objects.equals(cardOne.getSuit(), cardTwo.getSuit())) {
+        if (Objects.equals(cardOne.getSymbol(), cardTwo.getSymbol())) {
             printMessage("MATCH!");
             printMessage(currentPlayer.getName() + " wins!\n");
             currentPlayer.setScore(currentPlayer.getScore() + 1);
@@ -103,22 +100,6 @@ public class Snap extends CardGame{
             currentPlayer = playerTwo;
         } else {
             currentPlayer = playerOne;
-        }
-    }
-
-    // Function used for timer!!!
-    public void getStringInput() {
-        boolean isActive = true;
-        while (isActive) {
-            printMessage("Type 'snap' if the suits match!");
-            Scanner scanner = getScanner();
-            String userInput = scanner.nextLine();
-            if (userInput.equalsIgnoreCase("snap")) {
-                checkWin();
-            } else {
-                printMessage("Invalid input");
-            }
-            isActive = false;
         }
     }
 
